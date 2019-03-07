@@ -8,7 +8,7 @@ library(irlba)
 
 # Data processing (movielens 100 K) ---------------------------------------
 
-df <- read.table(file = "movielens100k.data", sep = "\t")[,1:3]
+df <- read.table(file = "data/movielens100k.data", sep = "\t")[,1:3]
 colnames(df) <- c("user_id", "movie_id", "rating")
 df[df$rating %in% c(1,2,3),3] <- -1
 df[df$rating %in% c(4,5),3] <- 1
